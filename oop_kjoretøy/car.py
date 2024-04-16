@@ -1,9 +1,13 @@
-class Car:
-    def __init__(self,merke,aar,farge):
-        self.merke = merke
-        self.aar = aar
-        self.farge = farge
-        
+from vehicle import Vehical
+
+class Car(Vehical):
+    def __init__(self,type, merke, aar, farge,antallDorer):
+        super().__init__(type, merke, aar, farge)
+        self.antall = antallDorer
+
+    def skrivUt(self):
+        super().skrivUt()
+        print(f"Antall dører: {self.antall}")    
 
 
     def drive(self):
