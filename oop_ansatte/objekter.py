@@ -12,7 +12,8 @@ Navn
 Ansatt ID
 Timelønn
 Metoder:
-__init__: En konstruktør som tar imot navn, ansatt ID og timelønn som parametere og oppretter en ny ansatt med disse verdiene.
+__init__: En konstruktør som tar imot navn, ansatt ID og timelønn som parametere 
+og oppretter en ny ansatt med disse verdiene.
 beregn_lønn(self, antall_timer): En metode som tar imot antall timer jobbet og returnerer lønnen basert på timelønnen til den ansatte.
 Leder-klassen skal arve fra Ansatt-klassen og ha følgende egenskaper og metoder:
 
@@ -34,4 +35,6 @@ from leder import leder
 ansatt1 = leder("Ola", 1, 100,2)
 
 ansatt1.skrivUT()
+
+print(ansatt1.beregn_lønn(1200))
 
