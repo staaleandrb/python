@@ -1,6 +1,6 @@
 from person import person
 
-class ansatte():
+class ansatte(person):
     def __init__(self, name,id,timelonn):
         super().__init__(name, id, timelonn)
         

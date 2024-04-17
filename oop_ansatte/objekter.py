@@ -40,4 +40,4 @@ ansatte3 = ansatte("Per", 3, 300)
 
 print(ansatt1.beregn_lønn(1200))
 
-ansatt3.endreLon(500)
+ansatte3.endreLon(500)
