@@ -31,10 +31,13 @@ Lykke til med oppgaven! Hvis du har noen spørsmål underveis, er jeg her for å
 
 """  
 from leder import leder
+from ansatt import ansatte
 
 ansatt1 = leder("Ola", 1, 100,2)
+ansatt2 = leder("Kari", 2, 200,3)
+ansatte3 = ansatte("Per", 3, 300)
 
-ansatt1.skrivUT()
 
 print(ansatt1.beregn_lønn(1200))
 
+ansatt3.endreLon(500)

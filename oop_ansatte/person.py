@@ -8,4 +8,8 @@ class person():
         print(self.name)
     
     def skrivUT(self):
-        print(self.name, self.id, self.timelonn)
+        print(f" Navn: {self.name} Ansatt id: {self.id} timelønn: {self.timelonn}")
+
+    def endreLon(self, nyLon):
+        self.timelonn = nyLon
+        print(f"Endret timelønn til {self.timelonn}")
