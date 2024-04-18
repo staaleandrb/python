@@ -1,3 +1,4 @@
+
 from person import person
 
 class leder(person):
@@ -5,6 +6,8 @@ class leder(person):
         super().__init__(name, id, timelonn)
         self.bonusandel = bonusandel
 
+
+        
     def skrivUT(self):
         print("Leder:")
         super().skrivUT()
