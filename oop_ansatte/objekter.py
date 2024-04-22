@@ -3,8 +3,8 @@
 
 Oppgave: Ansatt- og Leder-klasser
 
-Du skal lage to klasser i Python: Ansatt og Leder.
-
+Du skal lage tre klasser i Python: Person, Ansatt og Leder.
+ 
 Ansatt-klassen skal ha følgende egenskaper og metoder:
 
 Egenskaper:
