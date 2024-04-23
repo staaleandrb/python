@@ -9,5 +9,4 @@ class ansatt(person):
         super().skrivUt()
     
     def regnUtLonn(self, antall_timer):
-        beregningsgrunnlag = "Ansatt lonn: " + str(antall_timer * self.timelonn)
-        return beregningsgrunnlag
+        return "Ansatt lonn:"+ str(antall_timer * self.timelonn)

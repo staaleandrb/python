@@ -11,4 +11,4 @@ class leder(person):
         print(f"Bonusandel: {self.bonusandel}")
 
     def regnUtLonn(self, antall_timer):
-        return "Leder lonn:"+ str(antall_timer * self.timelonn + (self.bonusandel/100))
+        return "Leder lonn:"+ str(antall_timer * self.timelonn + antall_timer*(self.bonusandel/100))
