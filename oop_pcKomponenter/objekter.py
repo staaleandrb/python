@@ -25,24 +25,30 @@ Utvikle et enkelt brukergrensesnitt ved hjelp av biblioteker som Tkinter eller P
 Brukergrensesnittet bør tillate brukere å legge til nye komponenter, oppdatere eksisterende komponenter, filtrere komponenter etter pris, og vise den dyreste komponenten.
 Oppfordre elevene til å bruke kommentarer for å forklare koden der det er nødvendig, og til å teste programmet grundig etter hver implementering.
 """    
-
 import json
 from prosessor import Prosessor
 from ram import Ram
+import os
+
+# Bestem den absolutte banen til filen basert på den gjeldende arbeidsmappen
+mappebane = os.path.dirname(os.path.abspath(__file__))
+filbane = os.path.join(mappebane, "komponenter.json")
+
+print("Filbane:", filbane)  # Feilsøkingsutskrift
 
 # Opprett en tom liste for komponenter
 komponenter = []
 
 # Les innholdet fra .json-filen, hvis den eksisterer
 try:
-    with open("komponenter.json", "r") as json_file:
+    with open(filbane, "r") as json_file:
         komponenter = json.load(json_file)
 except FileNotFoundError:
     # Håndter hvis filen ikke finnes
     print("Filen 'komponenter.json' ble ikke funnet. En ny fil vil bli opprettet.")
 
 # Lag nye objekter
-prosessor1 = Prosessor("Intel i7", 2000, 8, 3.6)
+prosessor1 = Prosessor("Intel i8", 2000, 8, 3.6)
 prosessor2 = Prosessor("AMD Ryzen 5", 1500, 6, 3.2)
 
 # Legg til de nye objektene i listen av komponenter
@@ -50,5 +56,5 @@ komponenter.append(prosessor1.to_dict())
 komponenter.append(prosessor2.to_dict())
 
 # Skriv den oppdaterte listen til .json-filen
-with open("komponenter.json", "w") as json_file:
+with open(filbane, "w") as json_file:
     json.dump(komponenter, json_file, indent=4)
