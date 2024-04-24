@@ -7,4 +7,8 @@ class Komponent:
         print(f"Navn: {self.navn}")
         print(f"Pris: {self.pris}")
 
-    
+    def to_dict(self):
+        return {
+            "Navn": self.navn,
+            "pris": self.pris,
+        }

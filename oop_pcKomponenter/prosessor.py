@@ -11,3 +11,9 @@ class Prosessor(Komponent):
         super().vis_komponent()
         print(f"Kjerne: {self.kjerner}")
         print(f"klokkehastighet: {self.klokkehastighet}")
+
+    def to_dict(self):
+        pros_dict = super().to_dict()
+        pros_dict["Kjerne"] = self.kjerner
+        pros_dict["klokkkehastighet"] = self.klokkehastighet
+        return pros_dict

@@ -10,3 +10,9 @@ class Ram(Komponent):
         super().vis_komponent()
         print(f"Minne: {self.minne}")
         print(f"Hastighet: {self.hastighet}")
+
+    def to_dict(self):
+        ram_dict = super().to_dict()
+        ram_dict["minne"] = self.minne
+        ram_dict["hastifhet"] = self.hastighet
+        return ram_dict

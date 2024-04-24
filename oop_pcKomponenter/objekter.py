@@ -1,29 +1,54 @@
 """
-# UV Oppgave – Objektorientert programmering: PC-komponenter
+#Utvidelse av oppgaven:
 
-I denne oppgaven skal du, som programmerer, hjelpe en person som selger brukte PC-komponenter. 
-Med PC-komponenter mener vi deler som finnes inne i en PC. 
-Han ønsker på sikt lage et dataprogram med objektorientert programmering for å kunne registrerer alle PC-komponenter han får inn som han igjen skal selge.
+Etter å ha implementert klassene og objektene i Python, skal elevene utvide programmet med følgende funksjonaliteter:
 
-Du får i oppdrag å lage et forslag til hvilke klasser med objekt-verdier (properties) og med objekt-funksjoner (metoder) som er nødvendige.
+Lag en metode for å filtrere komponenter etter pris:
+Lag en funksjon som tar inn en liste av komponentobjekter og et prisintervall som parameter.
+Funksjonen skal returnere en ny liste med komponenter som faller innenfor det angitte prisintervallet.
 
-Tips! Tenk at du skal samle all informasjon som er generell, det vil si gyldig for alle typer komponenter, i en superklasse. 
-Lag så mange subklasser du trenger som igjen skal arve både objekt-verdier (properties) og objekt-funksjoner (metoder) fra superklassen.
-I subklassene skal du registrerer det som er spesielt for hver enkelt PC-komponent.
+Legg til funksjonalitet for å oppdatere komponentpriser:
+Lag en metode i hver klasse for å oppdatere prisen på en komponent.
+Denne metoden skal ta inn den nye prisen som parameter og oppdatere prisen på komponenten.
 
-Du skal opprette to objekter fra hver subklasse. 
-Alle objekter skal legges til i en liste. Alle elementer (objekter) i listen skal skrives ut med en løkke ved hjelp av den samme metoden «vis_komponent».
+Implementer funksjonalitet for å finne den dyreste komponenten:
+Lag en funksjon som tar inn en liste av komponentobjekter som parameter.
 
-Programmet skal skrives i Python
+Funksjonen skal returnere den dyreste komponenten i listen.
+Legg til støtte for å lagre og laste komponenter til/fra en fil:
 
+Implementer funksjoner for å lagre komponenter til en tekstfil og for å laste komponenter fra en tekstfil.
+Formatet på filen kan være enkel tekst eller CSV.
 
-
+Bygg et brukergrensesnitt:
+Utvikle et enkelt brukergrensesnitt ved hjelp av biblioteker som Tkinter eller PyQt.
+Brukergrensesnittet bør tillate brukere å legge til nye komponenter, oppdatere eksisterende komponenter, filtrere komponenter etter pris, og vise den dyreste komponenten.
+Oppfordre elevene til å bruke kommentarer for å forklare koden der det er nødvendig, og til å teste programmet grundig etter hver implementering.
 """    
 
+import json
 from prosessor import Prosessor
 from ram import Ram
 
+# Opprett en tom liste for komponenter
+komponenter = []
+
+# Les innholdet fra .json-filen, hvis den eksisterer
+try:
+    with open("komponenter.json", "r") as json_file:
+        komponenter = json.load(json_file)
+except FileNotFoundError:
+    # Håndter hvis filen ikke finnes
+    print("Filen 'komponenter.json' ble ikke funnet. En ny fil vil bli opprettet.")
+
+# Lag nye objekter
 prosessor1 = Prosessor("Intel i7", 2000, 8, 3.6)
 prosessor2 = Prosessor("AMD Ryzen 5", 1500, 6, 3.2)
 
-prosessor1.vis_komponent()
+# Legg til de nye objektene i listen av komponenter
+komponenter.append(prosessor1.to_dict())
+komponenter.append(prosessor2.to_dict())
+
+# Skriv den oppdaterte listen til .json-filen
+with open("komponenter.json", "w") as json_file:
+    json.dump(komponenter, json_file, indent=4)
