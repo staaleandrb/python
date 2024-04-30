@@ -1,3 +1,8 @@
+# Denne filen skal lese inn data fra en JSON-fil og opprette objekter basert på dataene.
+# Dette for å kunne bruke de ulike metodene i klassene 
+
+
+
 import json
 from prosessor import Prosessor
 from ram import Ram
