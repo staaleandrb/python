@@ -48,19 +48,22 @@ except FileNotFoundError:
     print("Filen 'komponenter.json' ble ikke funnet. En ny fil vil bli opprettet.")
 
 
-""""
 # Lag nye objekter
 prosessor1 = Prosessor("Intel i8", 2000, 8, 3.6)
 prosessor2 = Prosessor("AMD Ryzen 5", 1500, 6, 3.2)
-ram1 = Ram("Corsair Vengeance", 800, 16, 3200)
-ram2 = Ram("Kingston HyperX", 600, 8, 2666)
-
 
 # Legg til de nye objektene i listen av komponenter
 komponenter.append(prosessor1.to_dict())
 komponenter.append(prosessor2.to_dict())
+""""
+ram1 = Ram("Corsair Vengeance", 800, 16, 3200)
+ram2 = Ram("Kingston HyperX", 600, 8, 2666)
+
+
+
 komponenter.append(ram1.to_dict())
 komponenter.append(ram2.to_dict())
+
 """
 
 # Skriv den oppdaterte listen til .json-filen

@@ -1,38 +1,338 @@
 [
     {
-        "Navn": "Intel i8",
-        "pris": 2000,
-        "Kjerne": 8,
-        "klokkkehastighet": 3.6
-    },
-    {
-        "Navn": "AMD Ryzen 5",
-        "pris": 1500,
-        "Kjerne": 6,
-        "klokkkehastighet": 3.2
-    },
-    {
-        "Navn": "Intel i8",
-        "pris": 2000,
-        "Kjerne": 8,
-        "klokkkehastighet": 3.6
-    },
-    {
-        "Navn": "AMD Ryzen 5",
-        "pris": 1500,
-        "Kjerne": 6,
-        "klokkkehastighet": 3.2
-    },
-    {
-        "Navn": "Corsair Vengeance",
+        "navn": "Corsair Vengeance",
         "pris": 800,
         "minne": 16,
-        "hastifhet": 3200
+        "hastighet": 3200,
+        "kategori": "Ram"
     },
     {
-        "Navn": "Kingston HyperX",
+        "navn": "Kingston HyperX",
         "pris": 600,
         "minne": 8,
-        "hastifhet": 2666
+        "hastighet": 2666,
+        "kategori": "Ram"
+    },
+    {
+        "navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "Navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "Navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "Navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "Navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "Navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "Navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "Navn": "Intel i8",
+        "pris": 2000,
+        "kjerner": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "Navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerner": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "Navn": "Intel i8",
+        "pris": 2000,
+        "Kjerne": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "Navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "Kjerne": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "Navn": "Intel i8",
+        "pris": 2000,
+        "Kjerne": 8,
+        "klokkkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "Navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "Kjerne": 6,
+        "klokkkehastighet": 3.2,
+        "kategori": "Prosessor"
+    },
+    {
+        "Navn": "Intel i8",
+        "pris": 2000,
+        "kjerne": 8,
+        "klokkehastighet": 3.6,
+        "kategori": "Prosessor"
+    },
+    {
+        "Navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "kjerne": 6,
+        "klokkehastighet": 3.2,
+        "kategori": "Prosessor"
     }
 ]

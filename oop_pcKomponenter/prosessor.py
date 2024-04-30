@@ -5,6 +5,7 @@ class Prosessor(Komponent):
         super().__init__(navn, pris)
         self.kjerner = kjerner
         self.klokkehastighet = klokkehastighet
+        self.kategori = "Prosessor"
 
     def vis_komponent(self):
         print("Prosessor:")
@@ -14,6 +15,9 @@ class Prosessor(Komponent):
 
     def to_dict(self):
         pros_dict = super().to_dict()
-        pros_dict["Kjerne"] = self.kjerner
-        pros_dict["klokkkehastighet"] = self.klokkehastighet
+        pros_dict["kjerne"] = self.kjerner
+        pros_dict["klokkehastighet"] = self.klokkehastighet
+        pros_dict["kategori"] = self.kategori
+        print(pros_dict)
+        print(self.__dict__)
         return pros_dict

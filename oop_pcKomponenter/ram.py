@@ -5,6 +5,7 @@ class Ram(Komponent):
         super().__init__(navn, pris)
         self.minne = minne
         self.hastighet = hastighet
+        self.kategori = "Ram"
 
     def vis_komponent(self):
         super().vis_komponent()
@@ -15,4 +16,5 @@ class Ram(Komponent):
         ram_dict = super().to_dict()
         ram_dict["minne"] = self.minne
         ram_dict["hastighet"] = self.hastighet
+        ram_dict["kategori"] = self.kategori
         return ram_dict
