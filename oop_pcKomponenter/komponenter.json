@@ -10,5 +10,29 @@
         "pris": 1500,
         "Kjerne": 6,
         "klokkkehastighet": 3.2
+    },
+    {
+        "Navn": "Intel i8",
+        "pris": 2000,
+        "Kjerne": 8,
+        "klokkkehastighet": 3.6
+    },
+    {
+        "Navn": "AMD Ryzen 5",
+        "pris": 1500,
+        "Kjerne": 6,
+        "klokkkehastighet": 3.2
+    },
+    {
+        "Navn": "Corsair Vengeance",
+        "pris": 800,
+        "minne": 16,
+        "hastifhet": 3200
+    },
+    {
+        "Navn": "Kingston HyperX",
+        "pris": 600,
+        "minne": 8,
+        "hastifhet": 2666
     }
 ]

@@ -14,5 +14,5 @@ class Ram(Komponent):
     def to_dict(self):
         ram_dict = super().to_dict()
         ram_dict["minne"] = self.minne
-        ram_dict["hastifhet"] = self.hastighet
+        ram_dict["hastighet"] = self.hastighet
         return ram_dict
