@@ -25,12 +25,10 @@ for objekt in komponenter:
     if objekt.get("kategori") in kategorier:
         # Opprett en instans av Ram-klassen med objektets data
         
-        
-print(kategori)
 
 
-"""
-        objekt_klasse = eval(objekt["kategori"]).viskomponent(self)
+
+"""        objekt_klasse = eval(objekt["kategori"]).viskomponent(self)
         del objekt["kategori"]
         temp = objekt_klasse(**objekt)
 
