@@ -1,12 +1,9 @@
 import requests as req
  
-url = "http://numbersapi.com/100?json"
- 
-resultat = req.get(url)
- 
-print(f"Statuskode: {resultat.status_code}")
- 
-data = resultat.json()
- 
-print(data)
-"""print(data["text"])"""
+number = input("Enter a number: ")
+
+url = f"http://numbersapi.com/{number}?json"
+
+result = req.get(url)
+
+print(f"Status code: {result.status_code}")
