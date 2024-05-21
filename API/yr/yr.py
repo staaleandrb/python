@@ -41,11 +41,26 @@ timeseriesPorsgrunn = dataPorsgrunn['properties']['timeseries'] # Henter ut tids
 timeseriesBodo = dataBodo['properties']['timeseries'] # Henter ut tidsserien Bodø
 timeseriesSkagerak = dataSkagerak['properties']['timeseries'] # Henter ut tidsserien Skagerak
 
-# Skriv ut temperatur for de neste 10 tidspunktene
-print("Porsgrunn: Bodø:")
-for i in range(1, 11):
-   print(f"{timeseriesPorsgrunn[i]['data']['instant']['details']['air_temperature']} ", 
-      f"{timeseriesBodo[i]['data']['instant']['details']['air_temperature']}")
+
+
+
+
+if responsePorsgrunn.status_code == 200:
+    # Skriv ut temperatur for de neste 10 tidspunktene
+    print("Porsgrunn: Bodø:")
+    for i in range(1, 11):
+        print(f"{timeseriesPorsgrunn[i]['data']['instant']['details']['air_temperature']} ", 
+            f"{timeseriesBodo[i]['data']['instant']['details']['air_temperature']}")
    
-print("Vind i Skagerak:")
-print(f"{timeseriesSkagerak[0]['data']['instant']['details']['wind_speed']} m/s")
+    print("Vind i Skagerak:")
+    print(f"{timeseriesSkagerak[0]['data']['instant']['details']['wind_speed']} m/s")
+
+    # Sjekk om det er storm i Skagerak
+    
+    if timeseriesSkagerak[0]['data']['instant']['details']['wind_speed'] > 10:
+        print("Det er storm i Skagerak nå.")
+    else:
+        print("Det er ingen storm i Skagerak nå.")
+
+else:
+    print("Feil ved henting av data:", responsePorsgrunn.status_code)
