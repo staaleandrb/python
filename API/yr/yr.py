@@ -17,6 +17,12 @@ bodo = {          # Porsgrunn koordinater
     "lon": 14.34
 }
 
+skagerak = {          # Skagerak koordinater
+    "lat": 58.12,  
+    "lon": 9.65
+}
+
+
 # identifiser deg som bruker
 headers = {
     "User-Agent": "https://github.com/staaleandrb/"
@@ -25,14 +31,21 @@ headers = {
 # Send GET-forespørselen
 responsePorsgrunn = requests.get(url, params=porsgrunn, headers=headers)
 responseBodo = requests.get(url, params=bodo, headers=headers)
+responseSkagerak = requests.get(url, params=skagerak, headers=headers)
+
 dataPorsgrunn = responsePorsgrunn.json()
 dataBodo = responseBodo.json()
+dataSkagerak = responseSkagerak.json()
 
 timeseriesPorsgrunn = dataPorsgrunn['properties']['timeseries'] # Henter ut tidsserien Porsgrunn
 timeseriesBodo = dataBodo['properties']['timeseries'] # Henter ut tidsserien Bodø
+timeseriesSkagerak = dataSkagerak['properties']['timeseries'] # Henter ut tidsserien Skagerak
 
 # Skriv ut temperatur for de neste 10 tidspunktene
 print("Porsgrunn: Bodø:")
 for i in range(1, 11):
    print(f"{timeseriesPorsgrunn[i]['data']['instant']['details']['air_temperature']} ", 
       f"{timeseriesBodo[i]['data']['instant']['details']['air_temperature']}")
+   
+print("Vind i Skagerak:")
+print(f"{timeseriesSkagerak[0]['data']['instant']['details']['wind_speed']} m/s")
