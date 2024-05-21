@@ -19,6 +19,9 @@ headers = {
 
 # Send GET-forespørselen
 response = requests.get(url, params=params, headers=headers)
-
 data = response.json()
-print(data)
+timeseries = data['properties']['timeseries'] # Henter ut tidsserien
+
+# Skriv ut temperatur for de neste 10 tidspunktene
+for i in range(1, 11):
+    print(timeseries[i]['data']['instant']['details']['air_temperature']) # Skriver ut første element i tidsserien
