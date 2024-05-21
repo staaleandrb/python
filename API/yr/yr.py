@@ -7,9 +7,14 @@ url = "https://api.met.no/weatherapi/locationforecast/2.0/compact"
 
 # Angi dine koordinater (latitude, longitude)
 
-params = {          # Porsgrunn koordinater
+porsgrunn = {          # Porsgrunn koordinater
     "lat": 59.14,  
     "lon": 9.65
+}
+
+bodo = {          # Porsgrunn koordinater
+    "lat": 67.32,  
+    "lon": 14.34
 }
 
 # identifiser deg som bruker
@@ -18,10 +23,16 @@ headers = {
 }
 
 # Send GET-forespørselen
-response = requests.get(url, params=params, headers=headers)
-data = response.json()
-timeseries = data['properties']['timeseries'] # Henter ut tidsserien
+responsePorsgrunn = requests.get(url, params=porsgrunn, headers=headers)
+responseBodo = requests.get(url, params=bodo, headers=headers)
+dataPorsgrunn = responsePorsgrunn.json()
+dataBodo = responseBodo.json()
+
+timeseriesPorsgrunn = dataPorsgrunn['properties']['timeseries'] # Henter ut tidsserien Porsgrunn
+timeseriesBodo = dataBodo['properties']['timeseries'] # Henter ut tidsserien Bodø
 
 # Skriv ut temperatur for de neste 10 tidspunktene
+print("Porsgrunn: Bodø:")
 for i in range(1, 11):
-    print(timeseries[i]['data']['instant']['details']['air_temperature']) # Skriver ut første element i tidsserien
+   print(f"{timeseriesPorsgrunn[i]['data']['instant']['details']['air_temperature']} ", 
+      f"{timeseriesBodo[i]['data']['instant']['details']['air_temperature']}")
