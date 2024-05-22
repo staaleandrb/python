@@ -1,6 +1,6 @@
-def read_file():    #leser fila og skriver ut de 5 første bokstavene.
-    f = open("kryptert_1.txt", "r") 
-    print(f.read(50)) 
-    f.close
+def read_file():
+    with open("kryptert_1.txt", "r") as f:
+        content = f.read(5)  # Read the first 5 characters
+        print(content)  # Print the first 5 characters
 
 read_file()
