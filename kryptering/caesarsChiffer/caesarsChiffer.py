@@ -1,15 +1,13 @@
-import os
+alfa = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+antall = [0] * len(alfa)  # Initialiserer telleren til null for hver bokstav
 
-def read_file(file_path):
-    try:
-        with open(file_path, "r") as f:
-            content = f.read(5)  # Read the first 5 characters
-            print(content)  # Print the first 5 characters
-    except FileNotFoundError:
-        print(f"File not found: {file_path}")
+def read_file(filnavn):  # Åpner fila og leser innholdet av fila
+    with open(filnavn, "r") as f:  # Bruker 'with' for å sikre at filen lukkes korrekt
+        for line in f:  
+            for char in line.lower():  # Konverterer til små bokstaver
+                if char in alfa:
+                    antall[alfa.index(char)] += 1  # Øker telleren for riktig bokstav
+    print(antall)
 
-# Print the current working directory to verify
-print("Current working directory:", os.getcwd())
-
-# Example usage:
-read_file("c:/xampp/htdocs/repos/python/kryptering/caesarsChiffer/kryptert_1.txt")
+# Eksempel på bruk
+read_file("kryptering/caesarsChiffer/kryptert.txt")
