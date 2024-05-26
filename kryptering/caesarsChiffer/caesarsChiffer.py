@@ -1,4 +1,19 @@
 # Skrevet av: Staale Andre Bergersen
+# Denne er ikke ferdig.
+
+#Hvordan ble Maria Stuart avslørt? 
+#Jo, de som løste koden hennes brukte noe som kalles frekvensanalyse. 
+#Noen bokstaver er mye vanligere enn andre i et gitt språk. 
+#lista frekvens nedenfor viser bokstavene i det norske alfabetet, 
+# og hvor ofte de forekommer i vanlige tekster i posent. 
+#Med frekvensanalyse kan vi undersøke hvor ofte ulike tegn forekommer i en kryptert tekst,
+# og dermed finne ut hvilke tegn som koder for hvilke bokstaver. 
+#Det forutsetter at en form for substitusjonskryptering er brukt, 
+#slik som den som ble brukt av Maria Stuart.
+
+
+Du har fått tak i tre sammenkrøllede ark med merkelige tekster. De ser ut til å være kryptert av samme person. Kan du dekryptere tekstene ved hjelp av frekvensanalyse? Hvilken av tekstene tror du det er lurest å starte med?
+
 
 frekvens =[6.07,1,47,0.34,4.21,15.38,2.02,3.90,1.64,6.16,1.02,3.83,5.26,3.40,7.81,5.03,2.06,0.02,8.53,6,36,7.84,1.80,2.40,0.15,0.05,0.74,0.04,0.20,0.76,1.50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0] 
 
@@ -28,7 +43,11 @@ def skriut():
         print(alfa[i], antall[i], prosent[i],frekvens[i])
 
 def desifre():
-    print("sortert liste",organiser_alfa(alfa, prosent))
+    #print("sortert liste", organiser_alfa(alfa, prosent))
+    
+    sortert_alfa = organiser_alfa(alfa, prosent)
+    print("sortert liste", sortert_alfa)
+
 
 def organiser_alfa(alfa, frekvens):
     # Kombinerer alfa og frekvens til par av bokstav og frekvens
@@ -37,13 +56,12 @@ def organiser_alfa(alfa, frekvens):
     sortert_par = sorted(bokstav_frekvens_par, key=lambda x: x[1])
     # Trekker ut bokstavene fra sorterte par
     sortert_alfa = [par[0] for par in sortert_par]
-    return sortert_par
+    return sortert_alfa
 
 def skrivTilFil(innhold): # Skriver til fil. Om den ikke finnes så blir den opprettet
-    f= open(svar.txt,"w+")
+    f= open("kryptering/caesarsChiffer/svar.txt","w+")
     f.write(innhold) 
     f.close
 
-skrivTilFil("staale.txt","Dette")
 
 read_file("kryptering/caesarsChiffer/kryptert.txt")
