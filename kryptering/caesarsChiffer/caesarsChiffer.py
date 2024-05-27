@@ -11,7 +11,7 @@
 #slik som den som ble brukt av Maria Stuart.
 
 
-Du har fått tak i tre sammenkrøllede ark med merkelige tekster. De ser ut til å være kryptert av samme person. Kan du dekryptere tekstene ved hjelp av frekvensanalyse? Hvilken av tekstene tror du det er lurest å starte med?
+#Kan du dekryptere tekstene ved hjelp av frekvensanalyse? 
 
 
 frekvens =[6.07,1,47,0.34,4.21,15.38,2.02,3.90,1.64,6.16,1.02,3.83,5.26,3.40,7.81,5.03,2.06,0.02,8.53,6,36,7.84,1.80,2.40,0.15,0.05,0.74,0.04,0.20,0.76,1.50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0] 
