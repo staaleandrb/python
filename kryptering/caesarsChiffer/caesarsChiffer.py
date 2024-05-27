@@ -1,4 +1,3 @@
-# Skrevet av: Staale Andre Bergersen
 # Denne er ikke ferdig.
 
 #Hvordan ble Maria Stuart avslørt? 
