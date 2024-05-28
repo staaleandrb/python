@@ -24,3 +24,4 @@ Lag et progom som finner ut av:
 6. Hvor stor er differansen mellom Verdensrekorden og Norgesrekorden for menn på de enkelte distansene. Pressenter tallene og differansen på en god måte.
 
 
+
